@@ -1,0 +1,18 @@
+<h1><%= title %></h1>
+
+下記のデータを削除してもよろしいでしょうか？
+
+<table border=1>
+<tr>
+<th>id</th>
+<th>name</th>
+</tr>
+<tr>
+<td><%= data.seq %></td>
+<td><%= data.name %></td>
+</tr>
+</table>
+<form action="/delete" method="POST">
+  <input type="hidden" name="del" value="<%= data.seq %>" />
+  <input type="submit" name="delete" value="削除" />
+</form>

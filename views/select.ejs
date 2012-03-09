@@ -1,0 +1,21 @@
+<h1><%= title %></h1>
+
+<table border=1>
+<tr>
+<th>id</th>
+<th>name</th>
+<th>delete</th>
+</tr>
+<form action="/delete" method="POST">
+<% for (var i in results) { %>
+<tr>
+<td><a href="/update/<%= results[i].id %>"><%= results[i].id %></a></td>
+<td><%= results[i].name %></td>
+<td align="center"><input type="radio" name="del" value="<%= results[i].id %>" /></td>
+</tr>
+<% } %>
+</table>
+<input type="submit" value="選択した項目を削除" />
+</form>
+<br />
+<a href="/">back</a>

@@ -1,0 +1,8 @@
+<h1><%= title %></h1>
+
+<p>新しい名前を入力してください。</p>
+<form action="/update" method="POST">
+  <input type="hidden" name="id" value="<%= data[0].id %>" />
+  <input type="text" name="name" value="<%= data[0].name %>" /><br />
+  <input type="submit" value="変更を保存する" />
+</form>
